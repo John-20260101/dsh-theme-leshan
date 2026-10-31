@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>Leshan · 乐山三景</title>
+  <style>
+    :root { --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      --mono: ui-monospace, "SF Mono", Menlo, monospace; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 2400px; height: 1350px; overflow: hidden; }
+    body { background: #07111A; color: #E8F1F6; font-family: var(--font); -webkit-font-smoothing: antialiased;
+      display: grid; grid-template-rows: auto 1fr auto; padding: 86px 96px 62px; gap: 46px; }
+    .eyebrow { display: flex; align-items: center; gap: 16px; font: 500 12px/1 var(--mono);
+      letter-spacing: .22em; text-transform: uppercase; color: #8FA6B4; }
+    .eyebrow .rule { width: 84px; height: 1px; background: #24333F; }
+    .head { display: grid; grid-template-columns: auto 1fr; gap: 64px; align-items: end; margin-top: 28px; }
+    h1 { margin: 0; font-size: 118px; line-height: .92; letter-spacing: -.05em; font-weight: 600; }
+    h1 em { font-style: normal; color: #C97A50; }
+    .lede { max-width: 660px; margin: 0 0 12px; font-size: 16px; line-height: 1.8; color: #A7BCC9; }
+    .lede b { color: #E8F1F6; font-weight: 600; }
+    .panels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; min-height: 0; }
+    .panel { position: relative; border-radius: 20px; overflow: hidden; background-size: cover;
+      background-position: center; border: 1px solid rgb(232 241 246 / .12); }
+    .panel::after { content: ""; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgb(7 17 26 / .05) 0%, rgb(7 17 26 / .55) 52%, rgb(7 17 26 / .96) 100%); }
+    .panel .body { position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 26px 24px; z-index: 1; }
+    .panel .top { position: absolute; left: 18px; top: 16px; z-index: 2; display: flex; align-items: center; gap: 9px;
+      padding: 6px 11px; border-radius: 999px;
+      background: rgb(7 17 26 / .52); border: 1px solid rgb(232 241 246 / .16);
+      backdrop-filter: blur(8px);
+      font: 500 10.5px/1 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: rgb(232 241 246 / .86); }
+    .panel .top i { width: 7px; height: 7px; border-radius: 99px; background: currentColor; display: block; opacity: .7; }
+    .panel h2 { margin: 0; font-size: 46px; line-height: 1; letter-spacing: -.03em; font-weight: 600; }
+    .panel .en { margin: 10px 0 0; font: 500 12px/1 var(--mono); letter-spacing: .2em; text-transform: uppercase; color: #C9D8E1; opacity: .85; }
+    .panel p { margin: 12px 0 0; font-size: 13px; line-height: 1.7; color: #AFC3CE; max-width: 92%; }
+    .dots { display: flex; gap: 6px; margin-top: 16px; }
+    .dots i { height: 16px; flex: 1; border-radius: 5px; border: 1px solid rgb(255 255 255 / .14); }
+    .panel .stat { display: flex; justify-content: space-between; margin-top: 14px;
+      font: 400 10.5px/1 var(--mono); letter-spacing: .08em; color: #8FA6B4; text-transform: uppercase; }
+    .panel .stat b { color: #DCE8EF; font-weight: 500; }
+    footer { display: flex; align-items: center; gap: 18px; border-top: 1px solid #1B2934; padding-top: 20px;
+      font: 400 11.5px/1 var(--mono); color: #6F8595; }
+    footer b { color: #AFC3CE; font-weight: 500; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow"><span>dsh-theme-leshan</span><span class="rule"></span><span>乐山 · LESHAN</span><span class="rule"></span><span>three photographs, three skins</span></div>
+    <div class="head">
+      <h1>乐山<em>三景</em></h1>
+      <p class="lede">三张乐山照片，直接作为皮肤底图：<b>三江夜</b>取江面灯火的暖、<b>凌云晚照</b>取砂岩的金褐、<b>峨眉夜雾</b>取雾与月色的冷蓝。每套仍只声明六个输入色，面板改成半透明磨砂，正文对比度 15:1 以上。</p>
+    </div>
+  </header>
+  <main class="panels" id="panels"></main>
+  <footer>
+    <b>乐山 · LESHAN</b><span>·</span>
+    <span>3 photo skins · one pack</span><span>·</span>
+    <span>照片由用户提供，cover 裁切，原图尺寸标注在面板内</span>
+    <span style="margin-left:auto">dsh-theme-leshan · MIT</span>
+  </footer>
+  <script src="./data.js"></script>
+  <script src="./leshan.js"></script>
+</body>
+</html>

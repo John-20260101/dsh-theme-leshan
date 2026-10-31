@@ -1,0 +1,69 @@
+{
+  "name": "dsh-theme-leshan",
+  "version": "0.1.1",
+  "description": "Leshan: three photograph skins for the DeepSeek Harness Web GUI — River Night, Lingyun Dusk and Emei Mist. Each photograph is the page, one token engine derives the other 119 shell tokens, light and dark, switched in-app.",
+  "type": "module",
+  "license": "MIT",
+  "author": "John-20260101",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "theme",
+    "skin",
+    "wallpaper",
+    "leshan",
+    "photograph"
+  ],
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "src",
+    "docs",
+    "assets",
+    "screenshots.json",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    },
+    "engines": {
+      "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+    },
+    "compatibility": {
+      "dsh": ">=0.2.0-rc.1 <0.3.0-0",
+      "platform": [
+        "web"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "verify": "node scripts/build.mjs && node scripts/verify.mjs",
+    "shots": "node scripts/shots.mjs && python3 scripts/compress.py",
+    "test": "node scripts/verify.mjs && node tests/assets.mjs && node tests/host.mjs && node tests/client.mjs",
+    "test:client": "node tests/client.mjs",
+    "compress": "python3 scripts/compress.py"
+  },
+  "devDependencies": {
+    "playwright": "1.55.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

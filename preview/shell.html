@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leshan · DeepSeek Harness</title>
+  <link rel="stylesheet" href="./shell.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2.5 21 8v8l-9 5.5L3 16V8z" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".75"/>
+        <path d="M12 6.2 17.4 9.4v5.2L12 17.8 6.6 14.6V9.4z" fill="currentColor" opacity=".16"/>
+      </svg>
+      <b>DeepSeek Harness</b>
+      <span>Desktop</span>
+    </div>
+
+    <div class="new-chat"><span class="plus">＋</span>新建会话<kbd>⌘ N</kbd></div>
+
+    <div class="section-label">今天</div>
+    <div class="sessions">
+      <div class="session active">
+        <span class="title">Leshan 皮肤主题设计</span>
+        <span class="meta">刚刚 · deepseek</span>
+      </div>
+      <div class="session">
+        <span class="title">主题预览图渲染与尺寸规范</span>
+        <span class="meta">12 分钟 · deepseek</span>
+      </div>
+      <div class="session">
+        <span class="title">对比度校验与主题文档</span>
+        <span class="meta">1 小时 · deepseek</span>
+      </div>
+      <div class="session">
+        <span class="title">awesome-list 投稿准备</span>
+        <span class="meta">今天 14:02</span>
+      </div>
+      <div class="session">
+        <span class="title">驻京办榜单：数据清洗</span>
+        <span class="meta">今天 11:26</span>
+      </div>
+      <div class="session">
+        <span class="title">laser-gcode 材质参数表</span>
+        <span class="meta">昨天</span>
+      </div>
+    </div>
+
+    <div class="sidebar-foot">
+      <div class="skin-note">
+        <span class="swatch" id="foot-swatch"></span>
+        <span>Leshan · <b id="foot-name">三江夜</b></span>
+        <span style="margin-left:auto" id="foot-mode">浅色</span>
+      </div>
+      <div class="account">
+        <span class="avatar"></span>
+        <span class="who">johnsmacbook</span>
+        <span class="plan">Pro</span>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="crumb">
+        <span>deepseek</span><span class="sep">/</span><b>Leshan 皮肤主题设计</b>
+      </div>
+      <span class="pill-tag" id="top-mode">浅色</span>
+      <div class="spacer"></div>
+      <div class="icon-btn">⤴</div>
+      <div class="icon-btn">◫</div>
+      <div class="icon-btn">⋯</div>
+    </header>
+
+    <div class="thread">
+      <div class="thread-inner">
+        <div class="msg-user">
+          <div class="bubble">帮我用这三张乐山照片做皮肤，冷一点，别太灰。三套要看起来是同一个体系。</div>
+        </div>
+
+        <div class="msg-ai">
+          <span class="ai-avatar"></span>
+          <div>
+            <div class="ai-head"><b>DeepSeek</b><span>刚刚 · V4.1</span></div>
+            <div class="ai-body">
+              <p id="lead">先按现有 token 体系试了一版 <b id="body-skin">三江夜</b>：照片铺满窗口，罩层压到 0.86，面板转成半透明磨砂。正文对比度 <b id="body-contrast">15.4</b>:1，主按钮标签 <b id="body-button">6.0</b>:1，都过 AAA。</p>
+              <div class="code">
+                <div class="code-head">src/skins.mjs<span class="dotrow"><i></i><i></i><i></i></span></div>
+                <pre id="code-block"><span class="c">// 一套照片皮肤只声明六个输入色 + 一张照片</span>
+<span class="k">light</span>: {
+  bg: <span class="s">'#F4F6F5'</span>, plate: <span class="s">'#FFFFFF'</span>, ink: <span class="s">'#14201F'</span>,
+  muted: <span class="s">'#566663'</span>, accent: <span class="s">'#A9552F'</span>, onAccent: <span class="s">'#FFF7F2'</span>,
+}</pre>
+              </div>
+              <div class="tool"><span class="ok">✓</span><span class="cmd">pnpm verify</span><span id="tool-note">3 skins × 2 modes, all floors met</span><span class="dur">0.4s</span></div>
+              <div class="table">
+                <table>
+                  <thead><tr><th>皮肤</th><th>主色</th><th>浅色正文</th><th>深色正文</th></tr></thead>
+                  <tbody id="palette-rows">
+                    <tr><td><b>三江夜</b> River Night</td><td><code class="inline">#A9552F</code></td><td>15.4</td><td>15.9</td></tr>
+                    <tr><td><b>凌云晚照</b> Lingyun Dusk</td><td><code class="inline">#8A6320</code></td><td>15.4</td><td>16.5</td></tr>
+                    <tr><td><b>峨眉夜雾</b> Emei Mist</td><td><code class="inline">#25618F</code></td><td>16.1</td><td>15.7</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>其余 110 多个 <code class="inline">--dsw-*</code> 由同一套推导规则生成，皮肤之间共用一套语义，不会出现「某个状态色只在深色下能看」的问题。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="composer-wrap">
+      <div class="composer">
+        <div class="input">给 DeepSeek 发消息…</div>
+        <div class="bar">
+          <span class="chip">DeepSeek V4.1</span>
+          <span class="chip on">思考</span>
+          <span class="chip">工作区</span>
+          <span class="send">↑</span>
+        </div>
+      </div>
+      <div class="hint">预览为静态渲染 · 颜色取自 <code style="font-family:var(--mono)">docs/palettes.json</code></div>
+    </div>
+  </main>
+
+  <aside class="aside">
+    <div class="aside-head"><b>变更</b><span>4 个文件</span></div>
+    <div class="files">
+      <div class="file active"><span class="ico"></span>src/skins.mjs<span class="stat"><span class="add">+42</span> <span class="del">−0</span></span></div>
+      <div class="file"><span class="ico"></span>src/derive.mjs<span class="stat"><span class="add">+11</span> <span class="del">−2</span></span></div>
+      <div class="file"><span class="ico"></span>preview/shell.css<span class="stat"><span class="add">+34</span> <span class="del">−0</span></span></div>
+      <div class="file"><span class="ico"></span>docs/themes.md<span class="stat"><span class="add">+128</span> <span class="del">−0</span></span></div>
+    </div>
+    <div class="aside-head" style="height:38px;flex:0 0 38px;border-bottom:0;padding-top:6px"><b>文档</b></div>
+    <div class="files" style="padding-top:0">
+      <div class="file"><span class="ico"></span>docs/themes.md<span class="stat">主题文档</span></div>
+      <div class="file"><span class="ico"></span>docs/images.md<span class="stat">尺寸规范</span></div>
+    </div>
+    <div class="diff">
+      <div class="diff-head">src/skins.mjs · light</div>
+      <div class="line del"><span class="ln">-</span><span>accent: '#6B7A72',</span></div>
+      <div class="line add"><span class="ln">+</span><span>accent: '#2E6B57',</span></div>
+      <div class="line add"><span class="ln">+</span><span>onAccent: '#F7FBF8',</span></div>
+      <div class="line add"><span class="ln">+</span><span>accent2: '#7FA897',</span></div>
+    </div>
+  </aside>
+
+  <script src="./data.js"></script>
+  <script src="./shell.js"></script>
+</body>
+</html>

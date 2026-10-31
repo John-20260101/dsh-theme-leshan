@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>Leshan key art</title>
+  <style>
+    :root { --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      --mono: ui-monospace, "SF Mono", Menlo, monospace; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1536px; height: 1024px; overflow: hidden; }
+    body { position: relative; background-size: cover; background-position: center; color: #F2F7FA;
+      font-family: var(--font); -webkit-font-smoothing: antialiased; }
+    .scrim { position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgb(4 10 16 / .18) 0%, rgb(4 10 16 / .30) 38%, rgb(4 10 16 / .90) 78%, rgb(4 10 16 / .97) 100%); }
+    .frame { position: absolute; inset: 52px; border: 1px solid rgb(242 247 250 / .18); }
+    .top { position: absolute; left: 88px; right: 88px; top: 86px; display: flex; align-items: center; gap: 16px;
+      font: 500 11.5px/1 var(--mono); letter-spacing: .2em; text-transform: uppercase; color: rgb(242 247 250 / .8); }
+    .top .rule { flex: 1; height: 1px; background: rgb(242 247 250 / .22); }
+    .bottom { position: absolute; left: 88px; right: 88px; bottom: 84px; }
+    h1 { margin: 0; font-size: 138px; line-height: .88; letter-spacing: -.05em; font-weight: 600; }
+    .en { margin: 14px 0 0; font: 500 20px/1 var(--font); letter-spacing: .2em; text-transform: uppercase; color: var(--accent); }
+    .material { margin: 14px 0 0; font-size: 15px; line-height: 1.6; color: rgb(242 247 250 / .78); }
+    .row { display: flex; align-items: flex-end; gap: 28px; margin-top: 30px; padding-top: 22px;
+      border-top: 1px solid rgb(242 247 250 / .2); }
+    .sw { flex: 0 0 78px; }
+    .sw i { display: block; height: 30px; border-radius: 8px; border: 1px solid rgb(255 255 255 / .2); }
+    .sw span { display: block; margin-top: 7px; font: 400 9.5px/1 var(--mono); letter-spacing: .02em; color: rgb(242 247 250 / .62); }
+    .meta { margin-left: auto; text-align: right; font: 400 11.5px/1.75 var(--mono); color: rgb(242 247 250 / .7); }
+    .meta b { color: #F2F7FA; font-weight: 500; }
+  </style>
+</head>
+<body>
+  <div class="scrim"></div>
+  <div class="frame"></div>
+  <div class="top"><span>Leshan</span><span class="rule"></span><span id="series">乐山 · LESHAN</span><span id="index">01 / 03</span></div>
+  <div class="bottom">
+    <h1 id="zh">三江夜</h1>
+    <p class="en" id="en">River Night</p>
+    <p class="material" id="material"></p>
+    <div class="row">
+      <div id="swatches" style="display:flex;gap:10px"></div>
+      <div class="meta">
+        <div>body <b id="contrast">0</b>:1 · light / dark</div>
+        <div id="file">wallpaper · cover</div>
+      </div>
+    </div>
+  </div>
+  <script src="./data.js"></script>
+  <script src="./keyart-photo.js"></script>
+</body>
+</html>

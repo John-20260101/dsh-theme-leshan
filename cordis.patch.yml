@@ -1,0 +1,11 @@
+# dsh-theme-leshan bundle patch.
+#
+# Contributes one host row. The theme itself is browser-side: it ships through
+# the `dsh.client` manifest in package.json, so this row only has to exist for
+# the bundle to be listed, enabled and unloaded as a unit.
+#
+# A patch replaces the targeted row's whole `config`; only additive `insert`
+# rows appear here, never an override of a shipped row.
+- insert:
+    - id: theme-leshan
+      name: dsh-theme-leshan
