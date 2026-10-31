@@ -65,5 +65,13 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/John-20260101/dsh-theme-leshan.git"
+  },
+  "homepage": "https://github.com/John-20260101/dsh-theme-leshan#readme",
+  "bugs": {
+    "url": "https://github.com/John-20260101/dsh-theme-leshan/issues"
   }
 }
