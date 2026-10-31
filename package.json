@@ -1,6 +1,6 @@
 {
   "name": "dsh-theme-leshan",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Leshan: three photograph skins for the DeepSeek Harness Web GUI — River Night, Lingyun Dusk and Emei Mist. Each photograph is the page, one token engine derives the other 119 shell tokens, light and dark, switched in-app.",
   "type": "module",
   "license": "MIT",

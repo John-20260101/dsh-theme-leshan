@@ -4,6 +4,13 @@ All notable changes to `dsh-theme-leshan`. This package is a Leshan-only fork of
 `dsh-theme-atlas` 0.2.2: the token engine, tests and image pipeline are inherited,
 the six abstract material skins are not.
 
+## 0.1.2 — 2026-10-31
+
+- **Public install paths.** The READMEs now lead with the prebuilt GitHub
+  Release tarball and the `github:` source install, and keep the local folder
+  as the development path. Version bump so the published tarball carries the
+  same README the repository shows.
+
 ## 0.1.1 — 2026-10-31
 
 - **The photograph reaches the conversation column.** The shell paints its

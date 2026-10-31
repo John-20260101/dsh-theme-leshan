@@ -32,14 +32,18 @@
 
 ## 安装
 
-这个目录本身就是一个可加载的 bundle，本地安装不需要任何仓库：
-
 ```sh
-# 在运行外壳的 profile 下（这里以 desktop 为例）
-dsh plugin --profile desktop add /Users/johnsmacbook/Desktop/Program/deepseek/plugins/dsh-theme-leshan
+# 预构建 tarball，免构建（推荐）
+dsh plugin --profile desktop add https://github.com/John-20260101/dsh-theme-leshan/releases/latest/download/dsh-theme-leshan.tgz
+
+# 或直接从 GitHub 源码安装
+dsh plugin --profile desktop add github:John-20260101/dsh-theme-leshan
+
+# 本地开发：这个目录本身就是可加载的 bundle
+dsh plugin --profile desktop add /path/to/dsh-theme-leshan
 ```
 
-桌面端：**插件 → 添加插件**，填入上面的目录路径，启用后按提示刷新窗口。
+桌面端：**插件 → 添加插件**，填入上面的地址或目录，启用后按提示刷新窗口。
 
 这是一个标准 bundle：`package.json` 声明了 `dsh.bundle` 与 `cordis.patch.yml`，`dsh plugin add` 可以直接加载；`client.js` 已预构建，不需要构建授权。
 

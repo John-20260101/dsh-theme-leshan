@@ -32,14 +32,18 @@ The three photographs are used at their native resolution and cover-cropped by t
 
 ## Install
 
-The package in this folder is already a loadable bundle, so a local install needs no registry:
-
 ```sh
-# from the profile that runs the shell (desktop profile shown)
-dsh plugin --profile desktop add /Users/johnsmacbook/Desktop/Program/deepseek/plugins/dsh-theme-leshan
+# prebuilt tarball, no build step (recommended)
+dsh plugin --profile desktop add https://github.com/John-20260101/dsh-theme-leshan/releases/latest/download/dsh-theme-leshan.tgz
+
+# or straight from the GitHub source
+dsh plugin --profile desktop add github:John-20260101/dsh-theme-leshan
+
+# local development: this folder is already a loadable bundle
+dsh plugin --profile desktop add /path/to/dsh-theme-leshan
 ```
 
-Desktop app: **插件 → 添加插件**, paste the folder path above, enable it, then reload the window if the shell asks.
+Desktop app: **插件 → 添加插件**, paste the address or folder above, enable it, then reload the window if the shell asks.
 
 The plugin is a normal bundle: `package.json` declares `dsh.bundle` + a `cordis.patch.yml`, so `dsh plugin add` can load it. There is no build step to approve — `client.js` ships prebuilt.
 
